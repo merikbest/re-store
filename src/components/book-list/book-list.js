@@ -49,12 +49,8 @@ class BookListContainer extends Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
-        books: state.books,
-        loading: state.loading,
-        error: state.error
-    };
+const mapStateToProps = ({bookList: {books, loading, error}}) => {
+    return {books, loading, error};
 };
 
 const mapDispatchToProps = (dispatch, ownProps) => {
